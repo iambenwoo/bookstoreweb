@@ -1,0 +1,8 @@
+.TopBar {
+    background-color: skyblue;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}

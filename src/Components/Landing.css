@@ -1,0 +1,25 @@
+.Landing {
+    text-align: center;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.Content {
+    margin-bottom: 10px;
+}
+
+table td {
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+table td.label {
+    text-align: right;
+}
+
+table td.content {
+    text-align: left;
+}
