@@ -1,0 +1,51 @@
+.container {
+    min-height: 200vh;
+    text-align: center;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.item {
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    margin: 4px 2px;
+    text-align: center;
+    background-color: #4CAF50;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: ease-in 0.1s;
+}
+
+button:hover {
+    background-color: white;
+}
+
+table.Results {
+    width: 500px;
+    text-align: center;
+}
+
+th {
+    background-color: red;
+    color: white;
+}
+
+td {
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+table td.label {
+    text-align: right;
+}

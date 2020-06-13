@@ -1,0 +1,43 @@
+.DrawerTopBar {
+    min-height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Drawer {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    max-width: 100%;
+    left: 0;
+    top: 50px;
+    transition: transform 0.3s ease-out;
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-120px);
+}
+
+.menuicon {
+    margin-left: 10px;
+}
+
+@media (min-width: 500px) {
+    .DrawerTopBar {
+        display: none;
+    }
+
+    .Drawer {
+        display: none;
+    }
+}
+

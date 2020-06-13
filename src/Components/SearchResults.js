@@ -1,29 +1,47 @@
-import React, { Component } from 'react';
-import SearchResult from './SearchResult';
-import './SearchResults.css';
+import React from 'react';
+import SearchRecord from './SearchRecord';
+import './BookSearch.css';
 
-class SearchResults extends Component {
+const SearchResults = (props) => {
 
-    render() {
+    if (props.searchResults.length > 0) {
 
-        let results = <div>No records</div>;
+        let searchRecords = props.searchResults.map((r, index) => {
+            return <SearchRecord
+                key={index}
+                index={index}
+                record={r}
+                checked={props.selectItems[index]}
+                onChange={props.onChangeChkBoxSelectItem}
+            />
+        });
 
-        if (this.props.results.length > 0) {
-            results = this.props.results.map((r, index) =>
-                <SearchResult
-                    index={index}
-                    BookName={r.BookName}
-                    Author={r.Author}
-                />
-            );
-        }
-
-        return (
+        return <div className='item'>
             <table className="Results">
-                <tr><th className="Headers">Book Name</th><th className="Headers">Author</th></tr>
-                {results}
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>
+                            <input
+                                type='checkbox'
+                                name='chkBoxSelectAll'
+                                checked={props.selectAll}
+                                onChange={props.onChangeChkBoxSelectAll}>
+                            </input>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {searchRecords}
+                </tbody>
             </table>
-        );
+            <p><button onClick={props.onClickBtnAddToCart}>Add to cart</button></p>
+        </div>
+
+    } else {
+        return <p>No records</p>;
     }
 }
 

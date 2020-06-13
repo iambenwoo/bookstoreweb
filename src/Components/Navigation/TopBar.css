@@ -1,0 +1,30 @@
+.TopBar {
+    min-height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    }
+
+@media (max-width: 499px) {
+    .TopBar {
+        display: none;
+    }
+}
+
+.logo {
+    height: 50px;
+}
+
+.TopBarMenu {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}

@@ -1,0 +1,18 @@
+.NavItem{
+    height: 50px;
+    width: 120px;
+    border-bottom: solid 1px transparent;
+    box-sizing: border-box;
+    display: block;
+    background-color: skyblue;
+    text-align: center;
+    padding: 10px 3px;
+    cursor: pointer;
+}
+
+.NavItem:hover {
+    background-color: darkblue;
+    color: white;
+    transition: 0.4s;
+    border-bottom: solid 4px white;
+}
